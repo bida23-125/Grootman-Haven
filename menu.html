@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Grootman Haven Coffee</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Additional menu-specific styles */
+    .menu-category {
+      margin-bottom: 60px;
+    }
+    
+    .category-title {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .category-title h3 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      display: inline-block;
+    }
+    
+    .category-title h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--primary-color);
+    }
+    
+    .menu-description {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-style: italic;
+      color: var(--dark-color);
+    }
+    
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .menu-item {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .menu-item:hover {
+      transform: translateY(-10px);
+    }
+    
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .item-details {
+      padding: 20px;
+    }
+    
+    .item-details h4 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: var(--dark-color);
+    }
+    
+    .item-description {
+      margin-bottom: 15px;
+      color: var(--text-color);
+    }
+    
+    .price {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    
+    .dietary-info {
+      margin-top: 10px;
+      font-size: 0.8rem;
+    }
+    
+    .dietary-icon {
+      display: inline-block;
+      margin-right: 5px;
+      color: var(--primary-color);
+    }
+    
+    @media (max-width: 768px) {
+      .menu-items {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Grootman Haven</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="menu" style="padding-top: 120px;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Menu</h2>
+        <p>All our products are made with the finest ingredients and can be customized to your preference.</p>
+      </div>
+
+      <!-- Coffee Section -->
+      <div class="menu-category">
+        <div class="category-title">
+          <h3>Coffee</h3>
+        </div>
+        <p class="menu-description">Our coffee is sourced from sustainable farms and roasted in-house for maximum freshness.</p>
+        
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/espresso2.jpeg" alt="Espresso">
+            <div class="item-details">
+              <h4>Espresso</h4>
+              <p class="item-description">Our signature single-origin espresso shot, rich and aromatic</p>
+              <span class="price">P 125.50</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-coffee"></i></span>
+                <span>Strong</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/americano.jpeg" alt="Americano">
+            <div class="item-details">
+              <h4>Americano</h4>
+              <p class="item-description">Espresso with hot water for a smooth, rich flavor</p>
+              <span class="price">P 95.99</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-coffee"></i></span>
+                <span>Medium</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/cappuccino.jpeg" alt="Cappuccino">
+            <div class="item-details">
+              <h4>Cappuccino</h4>
+              <p class="item-description">Espresso with steamed milk and silky foam</p>
+              <span class="price">P 75.45</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-coffee"></i></span>
+                <span>Mild</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/latte.jpeg" alt="Latte">
+            <div class="item-details">
+              <h4>Latte</h4>
+              <p class="item-description">Espresso with more steamed milk and light foam</p>
+              <span class="price">P 87.45</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-coffee"></i></span>
+                <span>Mild</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/grootman's mocha.webp" alt="Grootman's Mocha">
+            <div class="item-details">
+              <h4>Grootman's Mocha</h4>
+              <p class="item-description">Espresso with chocolate and steamed milk</p>
+              <span class="price">P 130.50</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-coffee"></i></span>
+                <span>Sweet</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/coldbrew.jpeg" alt="Cold Brew">
+            <div class="item-details">
+              <h4>Cold Brew</h4>
+              <p class="item-description">Slow-steeped for 18 hours for smooth, low-acidity</p>
+              <span class="price">P 105.50</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-coffee"></i></span>
+                <span>Strong</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tea Section -->
+      <div class="menu-category">
+        <div class="category-title">
+          <h3>Tea</h3>
+        </div>
+        <p class="menu-description">Premium loose-leaf teas served with precision and care.</p>
+        
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/black tea.jpeg" alt="Black Tea">
+            <div class="item-details">
+              <h4>English Breakfast</h4>
+              <p class="item-description">Robust black tea blend to start your day</p>
+              <span class="price">P 35.25</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-leaf"></i></span>
+                <span>Caffeinated</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/earl grey2.jpeg" alt="Earl Grey Tea">
+            <div class="item-details">
+              <h4>Earl Grey</h4>
+              <p class="item-description">Black tea with bergamot oil</p>
+              <span class="price">P 66.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-leaf"></i></span>
+                <span>Caffeinated</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/chamomile.jpeg" alt="Chamomile Tea">
+            <div class="item-details">
+              <h4>Chamomile</h4>
+              <p class="item-description">Floral herbal infusion, naturally caffeine-free</p>
+              <span class="price">P 55.45</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-leaf"></i></span>
+                <span>Decaf</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/peppermint3.jpeg" alt="Peppermint Tea">
+            <div class="item-details">
+              <h4>Peppermint</h4>
+              <p class="item-description">Refreshing herbal tea, great for digestion</p>
+              <span class="price">P 75.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-leaf"></i></span>
+                <span>Decaf</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/matcha latte.jpeg" alt="Matcha Latte">
+            <div class="item-details">
+              <h4>Matcha Latte</h4>
+              <p class="item-description">Japanese green tea powder with steamed milk</p>
+              <span class="price">P 86.95</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-leaf"></i></span>
+                <span>Caffeinated</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/chai latte.jpeg" alt="Chai Latte">
+            <div class="item-details">
+              <h4>Chai Latte</h4>
+              <p class="item-description">Spiced tea with steamed milk and honey</p>
+              <span class="price">P 75.55</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-leaf"></i></span>
+                <span>Caffeinated</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food Section -->
+      <div class="menu-category">
+        <div class="category-title">
+          <h3>Food</h3>
+        </div>
+        <p class="menu-description">Freshly prepared meals and pastries made with local ingredients.</p>
+        
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/avocado toast.jpeg" alt="Avocado Toast">
+            <div class="item-details">
+              <h4>Avocado Toast</h4>
+              <p class="item-description">Sourdough with avocado, cherry tomatoes, and feta</p>
+              <span class="price">P 135.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-seedling"></i></span>
+                <span>Vegetarian</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/breakfast sandwich.jpeg" alt="Breakfast Sandwich">
+            <div class="item-details">
+              <h4>Breakfast Sandwich</h4>
+              <p class="item-description">Egg, cheddar, and bacon on a croissant</p>
+              <span class="price">P 175.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-bread-slice"></i></span>
+                <span>Contains gluten</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/yogurt parfait 3.jpeg" alt="Yogurt Parfait">
+            <div class="item-details">
+              <h4>Yogurt Parfait</h4>
+              <p class="item-description">Greek yogurt with granola and seasonal fruit</p>
+              <span class="price">P 96.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-seedling"></i></span>
+                <span>Vegetarian</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/quiche.jpeg" alt="Quiche of the Day">
+            <div class="item-details">
+              <h4>Quiche of the Day</h4>
+              <p class="item-description">Flaky crust with seasonal fillings</p>
+              <span class="price">P 145.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-egg"></i></span>
+                <span>Vegetarian option</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/croissant.jpeg" alt="Almond Croissant">
+            <div class="item-details">
+              <h4>Almond Croissant</h4>
+              <p class="item-description">Buttery croissant with almond filling</p>
+              <span class="price">P 69.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-bread-slice"></i></span>
+                <span>Contains nuts</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/chocolate chip.jpeg" alt="Chocolate Chip Cookie">
+            <div class="item-details">
+              <h4>Chocolate Chip Cookie</h4>
+              <p class="item-description">Freshly baked with dark chocolate chunks</p>
+              <span class="price">P 77.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-cookie"></i></span>
+                <span>Vegetarian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seasonal Specials Section -->
+      <div class="menu-category">
+        <div class="category-title">
+          <h3>Seasonal Specials</h3>
+        </div>
+        <p class="menu-description">Limited-time offerings that celebrate the flavors of the season.</p>
+        
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/pumpkin spice 2.jpeg" alt="Pumpkin Spice Latte">
+            <div class="item-details">
+              <h4>Pumpkin Spice Latte</h4>
+              <p class="item-description">Seasonal favorite with real pumpkin and spices</p>
+              <span class="price">P 72.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-pumpkin"></i></span>
+                <span>Fall Special</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/peppermint mocha2.jpeg" alt="Peppermint Mocha">
+            <div class="item-details">
+              <h4>Peppermint Mocha</h4>
+              <p class="item-description">Holiday special with crushed candy cane topping</p>
+              <span class="price">P 83.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-candy-cane"></i></span>
+                <span>Winter Special</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="images/lavender latte.jpeg" alt="Iced Lavender Latte">
+            <div class="item-details">
+              <h4>Iced Lavender Latte</h4>
+              <p class="item-description">Summer special with floral lavender notes</p>
+              <span class="price">P 91.00</span>
+              <div class="dietary-info">
+                <span class="dietary-icon"><i class="fas fa-ice-cream"></i></span>
+                <span>Summer Special</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p>&copy; 2025 Grootman Haven Coffee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
